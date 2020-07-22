@@ -157,17 +157,14 @@ class IndexView(ListView):
 
 class Actualizar(SuccessMessageMixin, UpdateView): 
     model = Usuario
-    form = formulario_usuario 
-    fields = "__all__"  
-    success_message = 'Usuario Actualizado Correctamente !' 
- 
-
-    def get_success_url(self):               
-        return redirect('/index/') 
+    form_class = formulario_usuario 
+    template_name = 'formulario_usuario.html'
+    success_url = reverse_lazy('usuario_listar')
 
 class Eliminar(DeleteView):
     model = Usuario
-    success_url = reverse_lazy('usuario_list')
+    template_name = 'eliminar.html'
+    success_url = reverse_lazy('usuario_listar')
 
 def inicio(request):
     return render(request, 'inicio.html')

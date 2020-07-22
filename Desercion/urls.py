@@ -23,7 +23,7 @@ urlpatterns = [
     path('redes/', views.redes),
     path('inicio/', views.inicio),
     path('acerca/', views.acerca),
-    path('index/', views.IndexView.as_view()),
-    path('editar/<int:pk>/', views.Actualizar.as_view(template_name = "editar_usuario.html")),
-    path('eliminar/<int:pk>/', views.Eliminar.as_view()),
+    path('index/', views.IndexView.as_view(), name = 'usuario_listar'),
+    path('editar/<int:pk>/', views.Actualizar.as_view(), name= 'usuario_editar'),
+    path('eliminar/<int:pk>/', views.Eliminar.as_view(), name= 'usuario_eliminar'),
 ]

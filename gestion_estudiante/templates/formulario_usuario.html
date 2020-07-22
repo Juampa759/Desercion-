@@ -1,3 +1,4 @@
+{% include "base.html"%}
 <html>
     <head></head>
     <meta charset="utf-8">
@@ -6,14 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <body>
-        {% if form.errors %}
-        <p style="color: red;"> por favor revisa este campo</p>
-        {% endif %}
-        <form action="" method="POST">{% csrf_token %}
-            <table>
-                {{ form.as_table }}
-            </table>
-            <input type="submit" value="Enviar">
-        </form>
+            {% if form.errors %}
+            <p style="color: red;"> por favor revisa este campo</p>
+            {% endif %}
+            <form action="" method="POST"  style=" text-align: center;  font-weight: 400; font-family: Font Awesome 5 Free;  font-size: large; margin: 25px 50px 75px 100px;">{% csrf_token %}
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input type="submit" value="Enviar">
+            </form>
     </body>
 </html>

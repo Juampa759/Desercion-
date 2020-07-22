@@ -1,0 +1,6 @@
+{% include "base.html"%}
+<form method="post"  style=" text-align: center;  font-weight: 400; font-family: Font Awesome 5 Free;  font-size: large; margin: 25px 50px 75px 100px;">{% csrf_token %}
+    <h3>¿Desea eliminar el registro?</h3>
+    <button class="btn btn-danger">Sí, Eliminar</button>
+    <a class="btn btn-default" href="/index/">Cancelar</a>
+</form>
